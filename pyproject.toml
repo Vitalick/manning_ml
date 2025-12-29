@@ -1,0 +1,18 @@
+[project]
+name = "ml-manning"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "ipython",
+    "jupyter",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "pandas-stubs",
+    "pydotplus",
+    "scikit-learn",
+    "tensorflow",
+    "xgboost",
+]
