@@ -15,18 +15,65 @@ dependencies = [
     "scikit-learn",
     "tensorflow",
     "xgboost",
-
+    # torch
+    #    "torch<2.10.0,>=2.9.0",
+    #    "torchvision",
+    #    "torchaudio",
+    #    "triton-windows<3.4",
+    # NVIDIA RAPIDS
+    #    "cudf-cu13==25.12.*",
+    #    "dask-cudf-cu13==25.12.*",
+    #    "cuml-cu13==25.12.*",
+    #    "cugraph-cu13==25.12.*",
+    #    "nx-cugraph-cu13==25.12.*",
+    #    "cuxfilter-cu13==25.12.*",
+    #    "cucim-cu13==25.12.*",
+    #    "pylibraft-cu13==25.12.*",
+    #    "raft-dask-cu13==25.12.*",
+    #    "cuvs-cu13==25.12.*",
+    #    "libcugraph-cu13==25.12.*",
+    #    "pylibcugraph-cu13==25.12.*",
+    #    "libcuvs-cu13==25.12.*",
     # tf cuda deps
-#    "nvidia-cublas-cu12",
-#    "nvidia-cuda-cupti-cu12",
-#    "nvidia-cuda-nvcc-cu12",
-#    "nvidia-cuda-nvrtc-cu12",
-#    "nvidia-cuda-runtime-cu12",
-#    "nvidia-cudnn-cu12",
-#    "nvidia-cufft-cu12",
-#    "nvidia-curand-cu12",
-#    "nvidia-cusolver-cu12",
-#    "nvidia-cusparse-cu12",
-##    "nvidia-nccl-cu12",
-#    "nvidia-nvjitlink-cu12",
+    #    "nvidia-cublas-cu12",
+    #    "nvidia-cuda-cupti-cu12",
+    #    "nvidia-cuda-nvcc-cu12",
+    #    "nvidia-cuda-nvrtc-cu12",
+    #    "nvidia-cuda-runtime-cu12",
+    #    "nvidia-cudnn-cu12",
+    #    "nvidia-cufft-cu12",
+    #    "nvidia-curand-cu12",
+    #    "nvidia-cusolver-cu12",
+    #    "nvidia-cusparse-cu12",
+    ##    "nvidia-nccl-cu12",
+    #    "nvidia-nvjitlink-cu12",
 ]
+
+[[tool.uv.index]]
+name = "nvidia"
+url = "https://pypi.nvidia.com"
+explicit = true
+
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.uv.sources]
+"cudf-cu13" = { index = "nvidia" }
+"dask-cudf-cu13" = { index = "nvidia" }
+"cuml-cu13" = { index = "nvidia" }
+"cugraph-cu13" = { index = "nvidia" }
+"nx-cugraph-cu13" = { index = "nvidia" }
+"cuxfilter-cu13" = { index = "nvidia" }
+"cucim-cu13" = { index = "nvidia" }
+"pylibraft-cu13" = { index = "nvidia" }
+"raft-dask-cu13" = { index = "nvidia" }
+"cuvs-cu13" = { index = "nvidia" }
+"libcugraph-cu13" = { index = "nvidia" }
+"pylibcugraph-cu13" = { index = "nvidia" }
+"libcuvs-cu13" = { index = "nvidia" }
+"torch" = { index = "pytorch-cu130" }
+"torchvision" = { index = "pytorch-cu130" }
+"xformers" = { index = "pytorch-cu130" }
